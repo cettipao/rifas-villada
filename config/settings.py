@@ -82,9 +82,13 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "dcad31eibehvo0",
+        "USER": "yxpcjhtthztgyl",
+        "PASSWORD": "8091f2c5d4b135188af9724c38e828e5bf5d570122cde00ccfc20c9936d9c982",
+        "HOST": "ec2-34-202-178-115.compute-1.amazonaws.com",  # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        "PORT": "5432",  # Set to empty string for default.
     }
 }
 
@@ -113,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Argentina/Buenos_Aires'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

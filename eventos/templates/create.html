@@ -2,13 +2,13 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Acceso Denegado
+    Crear Rifa
 {% endblock %}
 
 {% block content %}
     <nav>
-        <div class="nav-wrapper purple">
-            <a href="//{{ host }}/config/" class="brand-logo right" style="padding-right: 3%;">Rifas Villada</a>
+        <div class="nav-wrapper black">
+            <a href="//{{ host }}/config/" class="brand-logo right " style="padding-right: 3%;">Rifas Villada</a>
         </div>
     </nav>
 
@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" class="validate" name="comprador">
+                            <input id="icon_prefix" required type="text" class="validate" name="comprador">
                             <label for="icon_prefix">Comprador</label>
                         </div>
                     </div>

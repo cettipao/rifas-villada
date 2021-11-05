@@ -1,16 +1,17 @@
-{# Pagina estatica que avisa que no estas logueado como superuser. Utiliza base.html #}
+{# Pagina tarjeta virtual de invitado #}
 {% extends 'base.html' %}
 
 {% block title %}
-    Crear Rifa
+    {{ rifa.comprador }}
 {% endblock %}
 
 {% block content %}
-    <nav>
+    <nav>  {# Crea una navbar mas simple #}
         <div class="nav-wrapper black">
-            <a href="//{{ host }}/config/" class="brand-logo right " style="padding-right: 3%;">Rifas Villada</a>
+            <a href="//{{ host }}/config/" class="brand-logo right" style="padding-right: 3%;">Rifas Villada</a>
         </div>
     </nav>
+
 
     <div class="row">
 
@@ -25,7 +26,7 @@
 
         </div>
 
-        <div class="col s12 m8 l8" style="text-align: center;">
+        <div class="col s12 m8 l8">
             <!-- Note that "m8 l9" was added -->
             <!-- Teal page content
 
@@ -34,17 +35,19 @@
                 8-columns-wide on medium screens,
                 12-columns-wide on small screens  -->
 
-            <h1>Rifas Villada</h1>
-            <ul style="font-size: large;">
-                <li><b>1er Premio</b>: Anteojo de sol de mujer de loptique</li>
-                <li><b>2do Premio</b>: Anteojo de sol de hombre de loptique</li>
-                <li><b>3er Premio</b>: Camisa leñadora</li>
-                <li><b>4to Premio</b>: Reloj newtimes.relojes</li>
-                <li><b>5to Premio</b>: 2 Fundas iPhone ( Xs/Xs Max/7+/8+/11pro Max)</li>
-                <li><b>6to Premio</b>: Lavado de Óscar Wash</li>
-                <li><b>7mo Premio</b>: 2 docenas de alfajores de maicena</li>
-            </ul>
+            <h1 class="center">Rifa Valida</h1>
 
+            <div class="card-panel white">
+
+                <h5><b>Nombre de Comprador</b>: {{ rifa.comprador }}</h5>
+                <h5><b>Numero de rifa</b>: {{ rifa.id }} </h5>
+                <a class="btn" href="//{{host}}/static/rifas/{{rifa.id}}.png">Ver PDF</a>
+                
+
+            </div>
+
+
+        </div>
         <div class="col s0 m2 l2">
             <!-- Note that "m4 l3" was added -->
             <!-- Grey navigation panel
@@ -55,10 +58,6 @@
                   12-columns-wide on small screens  -->
 
         </div>
-        <script>
-            if (window.history.replaceState) {
-                window.history.replaceState(null, null, window.location.href);
-            }
-        </script>
+
 
 {% endblock %}
