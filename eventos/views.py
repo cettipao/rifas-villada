@@ -27,7 +27,7 @@ def createView(request):
         return redirect(msg)
 
 
-    vendedores = Vendedor.objects.all()
+    vendedores = Vendedor.objects.all().order_by("nombre")
     return render(request, "create.html", {"vendedores":vendedores})
 
 def rifaView(request, id):
