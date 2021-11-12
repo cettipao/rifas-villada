@@ -47,12 +47,11 @@ def genImage(nombre,id,host,num):
     img.paste(logo, (370, 1000), logo)
 
     # guarda
-    f = open(BASE_DIR + '/static/rifas/' + num + '.png', 'wb')
+    f = open(BASE_DIR + '/static/rifas/' + "rifa" + '.png', 'wb')
 
     img.save(f)
     f.close()
 
-    return "{}.png".format(num)
-
+    return "rifa.png"
 
 

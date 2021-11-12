@@ -8,7 +8,7 @@
 {% block content %}
     <nav>  {# Crea una navbar mas simple #}
         <div class="nav-wrapper black">
-            <a href="//{{ host }}/config/" class="brand-logo right" style="padding-right: 3%;">Rifas Villada</a>
+            <a href="" class="brand-logo right" style="padding-right: 3%;">Rifas Villada</a>
         </div>
     </nav>
 
@@ -41,7 +41,7 @@
 
                 <h5><b>Nombre de Comprador</b>: {{ rifa.comprador }}</h5>
                 <h5><b>Numero de rifa</b>: {{ rifa.id }} </h5>
-                <a class="btn" href="//{{host}}/static/rifas/{{rifa.id}}.png">Ver PDF</a>
+                <a class="btn" href="//{{host}}/ver-rifa/{{rifa.id}}">Ver PDF</a>
                 
 
             </div>
