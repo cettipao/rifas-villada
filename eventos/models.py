@@ -19,6 +19,10 @@ class Vendedor(models.Model):
     def __str__(self):
         return "{}".format(self.nombre)
 
+    @property
+    def rifas_vendidas(self):
+        return len(Rifa.objects.filter(vendedor=self))
+
 class Rifa(models.Model):
     comprador = models.CharField(max_length=30)
     vendedor = models.ForeignKey(

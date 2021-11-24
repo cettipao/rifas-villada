@@ -10,10 +10,11 @@ class RifaAdmin(admin.ModelAdmin):
     list_filter = ['vendedor']
 
 class VendedorAdmin(admin.ModelAdmin):
-    list_display = ['nombre','curso']
-    list_display_links = ['nombre','curso']
+    list_display = ['nombre','rifas_vendidas','curso']
+    list_display_links = ['nombre','rifas_vendidas','curso']
     search_fields = ['nombre']
     list_filter = ['curso']
+    ordering = ('rifas_vendidas',)
 
 
 
