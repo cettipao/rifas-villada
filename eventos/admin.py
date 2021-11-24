@@ -14,7 +14,6 @@ class VendedorAdmin(admin.ModelAdmin):
     list_display_links = ['nombre','rifas_vendidas','curso']
     search_fields = ['nombre']
     list_filter = ['curso']
-    ordering = ('rifas_vendidas',)
 
 
 
