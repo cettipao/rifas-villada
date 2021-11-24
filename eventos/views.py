@@ -17,13 +17,20 @@ from django.shortcuts import get_object_or_404
 def homeView(request):
     return render(request, "home.html", {})
 
+
+def verRifa(request, id):
+    rifa = Rifa.objects.get(id=id)
+    nombreImagen = genImage(rifa.comprador, str(rifa.id), request.get_host(), str(rifa.id))
+    msg = 'http://' + request.get_host() + '/static/rifas/' + "rifa.png"
+    return redirect(msg)
+
 def createView(request):
     if request.method == "POST":
         vendedor = Vendedor.objects.get(id=request.POST.get("vendedor"))
         comprador = request.POST.get("comprador")
         rifa = Rifa.objects.create(vendedor=vendedor, comprador=comprador)
         nombreImagen = genImage(comprador, str(rifa.id), request.get_host(), str(rifa.id))
-        msg = 'http://' + request.get_host() + '/static/rifas/' + nombreImagen
+        msg = 'http://' + request.get_host() + '/static/rifas/' + "rifa.png"
         return redirect(msg)
 
 
