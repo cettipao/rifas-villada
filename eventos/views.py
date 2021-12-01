@@ -25,6 +25,7 @@ def verRifa(request, id):
     return redirect(msg)
 
 def createView(request):
+    return render(request, "stopped.html", {})
     if request.method == "POST":
         vendedor = Vendedor.objects.get(id=request.POST.get("vendedor"))
         comprador = request.POST.get("comprador")

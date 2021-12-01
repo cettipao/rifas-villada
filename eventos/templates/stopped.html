@@ -1,0 +1,56 @@
+{# Pagina estatica que avisa que no estas logueado como superuser. Utiliza base.html #}
+{% extends 'base.html' %}
+
+{% block title %}
+    Rifas Villada
+{% endblock %}
+
+{% block content %}
+    <nav>
+        <div class="nav-wrapper black">
+            <a  class="brand-logo right " style="padding-right: 3%;">Rifas Villada</a>
+        </div>
+    </nav>
+
+    <div class="row">
+
+        <div class="col s0 m2 l2">
+            <!-- Note that "m4 l3" was added -->
+            <!-- Grey navigation panel
+
+                    This content will be:
+                3-columns-wide on large screens,
+                4-columns-wide on medium screens,
+                12-columns-wide on small screens  -->
+
+        </div>
+
+        <div class="col s12 m8 l8" style="text-align: center;">
+            <!-- Note that "m8 l9" was added -->
+            <!-- Teal page content
+
+                    This content will be:
+                9-columns-wide on large screens,
+                8-columns-wide on medium screens,
+                12-columns-wide on small screens  -->
+
+            <h3>El periodo de venta de rifas concluyó</h3>
+            <p>Gracias a todos por colaborar</p>
+
+        <div class="col s0 m2 l2">
+            <!-- Note that "m4 l3" was added -->
+            <!-- Grey navigation panel
+
+                      This content will be:
+                  3-columns-wide on large screens,
+                  4-columns-wide on medium screens,
+                  12-columns-wide on small screens  -->
+
+        </div>
+        <script>
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+            }
+        </script>
+
+{% endblock %}
